@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Atividade Modal</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<style>
+
+		/* Modify */
+		.modal-tema .modal-header {
+			padding: 2rem;
+		}
+
+		.modal-tema.modal-danger .modal-backdrop{
+			background-color: red;
+		}
+
+		/* Style */
+		.modal-tema.modal-warning .modal-header {
+			background-color: orange;
+		}		
+
+		.modal-tema.modal-success .modal-header {
+			background-color: green;
+		}
+
+		.modal-tema.modal-danger .modal-header {
+			background-color: red;
+		}
+
+		.modal-tema .modal-header .modal-title,
+		.modal-tema .modal-header .close {
+			color:#fff;
+		}
+
+
+		.modal-tema.modal-success .btn-primary ,
+		.modal-tema.modal-success .btn-secondary{
+			border-width: 1px;
+			background-color: transparent;
+			border-color: #27ae60;
+			color: #27ae60;
+			text-transform: uppercase;
+		}
+
+		.modal-tema.modal-success .btn-primary:hover ,
+		.modal-tema.modal-success .btn-secondary:hover{
+			background-color: #2ecc71;
+			color: #fff;
+
+		}
+
+		.modal-tema.modal-warning .btn-primary ,
+		.modal-tema.modal-warning .btn-secondary{
+			border-width: 1px;
+			background-color: transparent;
+			border-color: #e67e22;
+			color: #e67e22;
+			text-transform: uppercase;
+		}
+
+		.modal-tema.modal-warning .btn-primary:hover ,
+		.modal-tema.modal-warning .btn-secondary:hover{
+			background-color: #d35400;
+			color: #fff;
+
+		}
+
+		.modal-tema.modal-danger .btn-primary ,
+		.modal-tema.modal-danger .btn-secondary{
+			border-width: 1px;
+			background-color: transparent;
+			border-color: #e74c3c;
+			color: #e74c3c;
+			text-transform: uppercase;
+		}
+
+		.modal-tema.modal-danger .btn-primary:hover ,
+		.modal-tema.modal-danger .btn-secondary:hover{
+			background-color: #c0392b;
+			color: #fff;
+
+		}
+
+
+		
+		.modal-tema .modal-body {			
+			font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+			/*font-family: Tahoma, Verdana, Segoe, sans-serif;*/
+
+		}
+
+		.modal-tema.modal-success .modal-body h2{
+			color: green;	
+			font-weight: 900;		
+		}
+
+		
+		.modal-tema.modal-warning .modal-body h2{
+			color: orange;	
+			font-weight: 900;		
+		}
+
+		.modal-tema.modal-danger .modal-body h2{
+			color: red;	
+			font-weight: 900;		
+		}
+
+		.modal-tema .modal-body h5{
+			color: gray;
+		}
+
+		.botoes{
+			margin-top: 200px;
+		}
+		.btn-success{
+			background-color: transparent;
+			color: green;
+			padding: 2rem 6rem;
+		}
+
+		.btn-success:hover{
+			background-color: #2ecc71;
+			color: white;
+			padding: 2rem 6rem;
+			
+
+			
+			
+		}
+
+		.btn-success:hover.btn-warning{
+			color: black;
+		}
+
+		.btn-warning{
+			background-color: transparent;
+			color: orange;
+			padding: 2rem 6rem;
+		}
+
+		.btn-danger{
+			background-color: transparent;
+			color: red;
+			padding: 2rem 6rem;
+		}
+
+
+	</style>
+</head>
+<body>
+
+		<div class="container d-flex flex-row justify-content-around botoes">
+		
+		<!-- Button trigger modal -->
+		<div class="d-flex align-items-center">
+		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#success">
+		  <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Success
+		</button>
+		</div>
+
+
+		<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#warning">
+		  Warning
+		</button>
+		
+
+		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#danger">
+		  Danger
+		</button>
+
+		<button type="button" class="btn btn-primary teste" data-toggle="modal" data-target="#teste">
+		  Teste
+		</button>
+
+		</div>
+
+
+
+<!-- Modal -->
+		<div class="modal modal-tema teste fade" id="teste" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header d-flex flex-column">		        
+		   
+
+		      </div>
+		      <div class="modal-body d-flex flex-column align-items-center">
+		        
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">back to my work</button>
+		        <button type="button" class="btn btn-primary">back to store hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+
+		
+<!-- Modal -->
+		<div class="modal modal-tema modal-success fade" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header d-flex flex-column">		        
+		        <div class="d-flex align-self-end">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+		        </div>
+
+		        <img src="img/joia-min.png" alt="">
+
+		      </div>
+		      <div class="modal-body d-flex flex-column align-items-center">
+		        <h2>Great!</h2>
+		        <h5>You data has been sucessfully saved.</h5>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">back to my work</button>
+		        <button type="button" class="btn btn-primary">back to store hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+<!-- Modal -->
+		<div class="modal modal-tema modal-danger fade" id="danger" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header d-flex flex-column">		        
+		        <div class="d-flex align-self-end">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+		        </div>
+
+		        <img src="img/danger-min.png" alt="">
+
+		      </div>
+		      <div class="modal-body d-flex flex-column align-items-center">
+		        <h2>Alert!</h2>
+		        <h5>You data not has been saved.</h5>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">back to my work</button>
+		        <button type="button" class="btn btn-primary">back to store hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+<!-- Modal -->
+		<div class="modal modal-tema modal-warning fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header d-flex flex-column">		        
+		        <div class="d-flex align-self-end">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+		        </div>
+
+		        <img src="img/warning-min.png" alt="">
+
+		      </div>
+		      <div class="modal-body d-flex flex-column align-items-center">
+		        <h2>Attention!</h2>
+		        <h5>Missing data to be saved.</h5>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">back to my work</button>
+		        <button type="button" class="btn btn-primary">back to store hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
